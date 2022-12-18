@@ -12,9 +12,11 @@
 - An optional argument passed to the createStore method is the Redux.middleWare() method which is used to handle async functions
 
 
-'''jsx
+```jsx
+
     const store = Redux.createStore(reducer)
-'''
+```
+
 
 <code>const reducer = ()=>{}</code>
 
@@ -22,7 +24,7 @@
 - Most preferrably use a <code>switch(){case}</code> statement for conditional rendering of the state to be passed to the store
 
 
-'''jsx
+```jsx
     const reducer = (state=defaultState, action)=>{
         switch(action.type){
             case CASE1:
@@ -32,7 +34,7 @@
         }
     }
 
-'''
+```
 
 <code>store.dispath()</code>
 
@@ -40,10 +42,10 @@
 - Takes in an action object type as the parameter or most preferrably takes in a action creator as an argument to make your code simple and more readable
 - Can optionally take in a callback as a second argument, but the callback is most prefarrably placed inside a function which is added as a parameter in the <code>.subscribe(callback)</code> method.
 
-'''jsx
+```jsx
 
     store.dispatch(action creator)
-'''
+```
 
 <code>store.subscribe(callback)</code>
  
@@ -57,15 +59,19 @@
 - This redux method combined multiple reducers in a redux file that will be used in the createStore method which can only be called once
 - Takes in an object with key value pairs of reducers as an argument
 
-'''jsx
+```jsx
     const reducers = Redux.combineReducers({
         redu1 : nameOfReducer,
         redu2 : nameOfReducer
     })
 
-'''
+```
 
 
 <code>store.getState</code>
 
-- This method is used in getting the state of a redux store
+- This method is used in getting the current state of a redux store
+
+```jsx
+    const result = store.getState()
+```
