@@ -36,3 +36,41 @@ const store = Redux.createStore(reducer())
 //have a dispath method that when called submits a new action to the store
 store.dispatch(loginAction())
 store.dispatch(logoutUser())
+
+
+
+//Array and object methods to prevent state mutability
+//Remember never to mutate state
+
+
+//assign a const to a type which will be used in an action#
+const WOKENUP = 'WAKEUP'
+
+//create a action creator for comparison
+const wokenUp = ()=>{
+    return {
+        type : WOKENUP
+    }
+}
+
+//create an object to check status
+const profile = {
+    name : 'Juma',
+    status: 'offline',
+    activity: 'coding'
+}
+
+
+//have a reducer to manage state
+const reducerObject = (state = profile, action)=>{
+    switch(action.type){
+        case WOKENUP:
+            return Object.assign({}, state, {status:'online'})
+    }
+}
+
+//vreate a store object for state storage
+const storeObject = Redux.createStore(reducerObject)
+
+//dispatch action to store
+store.dispatch(wokenUp())
