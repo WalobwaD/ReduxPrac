@@ -74,3 +74,11 @@ const storeObject = Redux.createStore(reducerObject)
 
 //dispatch action to store
 store.dispatch(wokenUp())
+
+
+
+//if it is an array
+//use
+// Array.slice()
+// Array.concat()
+// [...state] -- spread operator
