@@ -1,14 +1,14 @@
 <h1 align = "center">Redux</h1>
 <p>Redux is a state management library, an application data-flow architecture to be specific</p>
 <h3>Redux construction</h3>
-<p>Redux uses a store object that store all state required by an application and needed to be passed on to yyour project components</p>
+<p>Redux uses a store object that store all state required by an application and needed to be passed on to your project components</p>
 
 > Important Redux methods
 
 <code>Redux.createStore()</code>
 
-- The create store method is used to crate a store object for your redux program which will be exported and used in other components for state management
-- The createStore(reducer) takes in a reducer as an argument (duscussed below)
+- The create store method is used to create a store object for your redux program which will be exported and used in other components for state management
+- The createStore(reducer) takes in a reducer as an argument (discussed below)
 - An optional argument passed to the createStore method is the Redux.middleWare() method which is used to handle async functions
 
 
@@ -51,12 +51,12 @@
  
 - A special redux  method that adds a listener to a store
 - Determines what a your program should execute immediately after a state is updated in the reducer
-- Taked in a callback function created as an argument
+- Takes in a callback function created as an argument
 
 
 <code>Redux.combineReducer()</code>
 
-- This redux method combined multiple reducers in a redux file that will be used in the createStore method which can only be called once
+- This redux method combines multiple reducers in a redux file that will be used in the createStore method which can only be called once
 - Takes in an object with key value pairs of reducers as an argument
 
 ```jsx
