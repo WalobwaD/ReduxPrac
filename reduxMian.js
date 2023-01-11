@@ -33,7 +33,7 @@ const reducer = (state = {authenticated : false}, action)=>{
 //create a store object using Redux create store
 const store = Redux.createStore(reducer())
 
-//have a dispath method that when called submits a new action to the store
+//have a dispatch method that when called submits a new action to the store
 store.dispatch(loginAction())
 store.dispatch(logoutUser())
 
@@ -69,7 +69,7 @@ const reducerObject = (state = profile, action)=>{
     }
 }
 
-//vreate a store object for state storage
+//create a store object for state storage
 const storeObject = Redux.createStore(reducerObject)
 
 //dispatch action to store
